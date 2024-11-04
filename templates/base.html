@@ -1,0 +1,30 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include "global/partials/_head.html" %}
+
+    <title>{% block title %}{% endblock title %}E-commerce</title>
+</head>
+
+<body>
+    {% include "global/partials/_nav.html" %}
+
+    <main class="container mt-4 mb-4">
+        {% include "global/partials/_messages.html" %}
+        
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    {% include "global/partials/_footer.html" %}
+
+    <script src="{% static "assets/bootstrap/js/jquery-3.2.1.slim.min.js" %}"></script>
+    <script src="{% static "assets/bootstrap/js/popper.min.js" %}"></script>
+    <script src="{% static "assets/bootstrap/js/bootstrap.min.js" %}"></script>
+    <script defer src="{% static "assets/font-awesome/js/all.js" %}"></script>
+    <script src="{% static "assets/custom/js/scripts.js" %}"></script>
+</body>
+
+</html>
